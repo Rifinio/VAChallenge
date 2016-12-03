@@ -10,7 +10,6 @@
 		4911E123C4F4B332C3D330F7 /* Pods_VAChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF96BBBD8E71E6159D385E1 /* Pods_VAChallengeTests.framework */; };
 		CD27AC491DF306070076409F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC481DF306070076409F /* AppDelegate.swift */; };
 		CD27AC4B1DF306070076409F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC4A1DF306070076409F /* ViewController.swift */; };
-		CD27AC4E1DF306070076409F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC4C1DF306070076409F /* Main.storyboard */; };
 		CD27AC501DF306070076409F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC4F1DF306070076409F /* Assets.xcassets */; };
 		CD27AC531DF306070076409F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC511DF306070076409F /* LaunchScreen.storyboard */; };
 		CD27AC5E1DF306070076409F /* VAChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC5D1DF306070076409F /* VAChallengeTests.swift */; };
@@ -36,7 +35,6 @@
 		CD27AC451DF306070076409F /* VAChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VAChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD27AC481DF306070076409F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD27AC4A1DF306070076409F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD27AC4D1DF306070076409F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD27AC4F1DF306070076409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD27AC521DF306070076409F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD27AC541DF306070076409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 			children = (
 				CD27AC481DF306070076409F /* AppDelegate.swift */,
 				CD27AC4A1DF306070076409F /* ViewController.swift */,
-				CD27AC4C1DF306070076409F /* Main.storyboard */,
 				CD27AC4F1DF306070076409F /* Assets.xcassets */,
 				CD27AC511DF306070076409F /* LaunchScreen.storyboard */,
 				CD27AC541DF306070076409F /* Info.plist */,
@@ -221,7 +218,6 @@
 			files = (
 				CD27AC531DF306070076409F /* LaunchScreen.storyboard in Resources */,
 				CD27AC501DF306070076409F /* Assets.xcassets in Resources */,
-				CD27AC4E1DF306070076409F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,14 +352,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CD27AC4C1DF306070076409F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD27AC4D1DF306070076409F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD27AC511DF306070076409F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -545,6 +533,7 @@
 				CD27AC641DF306070076409F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD27AC651DF306070076409F /* Build configuration list for PBXNativeTarget "VAChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +542,7 @@
 				CD27AC671DF306070076409F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
