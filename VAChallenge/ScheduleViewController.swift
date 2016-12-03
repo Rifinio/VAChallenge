@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ScheduleViewController: UIViewController {
 
     let labelStartDate :UILabel = {
         let label = UILabel()
