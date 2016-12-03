@@ -1,0 +1,6 @@
+framework module Pods_VAChallenge {
+  umbrella header "Pods-VAChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
