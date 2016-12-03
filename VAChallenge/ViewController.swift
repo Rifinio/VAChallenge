@@ -34,15 +34,15 @@ class ViewController: UIViewController {
         self.setUpView()
 
         datePicker.addTarget(self, action: #selector(onDidChangeDate(sender:)), for: .valueChanged)
-        self.setDateLablesFromDate(beginDate: Date(), isDateNow: true)
+        self.setDateLablesFromDate(beginDate: Date())
     }
 
-    func setDateLablesFromDate(beginDate :Date, isDateNow: Bool) {
+    func setDateLablesFromDate(beginDate :Date) {
 
         let dateFormatter :DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM YYYY"
 
-        if isDateNow == true {
+        if self.daysBetweenDates(startDate: Date(), endDate: beginDate) == 0 {
             labelStartDate.text = "Today"
         } else {
             labelStartDate.text = dateFormatter.string(from: beginDate)
@@ -51,16 +51,21 @@ class ViewController: UIViewController {
         // caculate one week from now
         let oneWeekLater :Date = Calendar.current.date(byAdding: .day, value: 7, to: beginDate)!
         labelEndDate.text = dateFormatter.string(from: oneWeekLater)
-
     }
 
     func onDidChangeDate(sender: UIDatePicker) {
-        self.setDateLablesFromDate(beginDate: sender.date as Date, isDateNow: false)
+        self.setDateLablesFromDate(beginDate: sender.date as Date)
     }
 
     func clearButtonClick() {
-        self.setDateLablesFromDate(beginDate: Date(), isDateNow: true)
+        self.setDateLablesFromDate(beginDate: Date())
         datePicker.setDate(Date(), animated: true)
+    }
+
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+        return components.day!
     }
 
     private func setUpView(){
