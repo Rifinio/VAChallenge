@@ -14,6 +14,7 @@
 		CD27AC531DF306070076409F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC511DF306070076409F /* LaunchScreen.storyboard */; };
 		CD27AC5E1DF306070076409F /* VAChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC5D1DF306070076409F /* VAChallengeTests.swift */; };
 		CD27AC691DF3221A0076409F /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC681DF3221A0076409F /* OverviewViewController.swift */; };
+		CD27AC711DF32F120076409F /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC701DF32F120076409F /* Appointment.swift */; };
 		E5067811DC1AF19A4B96687A /* Pods_VAChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7AF273614F8660D29BC924B /* Pods_VAChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		CD27AC5D1DF306070076409F /* VAChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAChallengeTests.swift; sourceTree = "<group>"; };
 		CD27AC5F1DF306070076409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD27AC681DF3221A0076409F /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		CD27AC701DF32F120076409F /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		D7AF273614F8660D29BC924B /* Pods_VAChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VAChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 		CD27AC471DF306070076409F /* VAChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				CD27AC6F1DF32EFE0076409F /* Model */,
 				CD27AC481DF306070076409F /* AppDelegate.swift */,
 				CD27AC4A1DF306070076409F /* ScheduleViewController.swift */,
 				CD27AC681DF3221A0076409F /* OverviewViewController.swift */,
@@ -126,6 +129,14 @@
 				CD27AC5F1DF306070076409F /* Info.plist */,
 			);
 			path = VAChallengeTests;
+			sourceTree = "<group>";
+		};
+		CD27AC6F1DF32EFE0076409F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD27AC701DF32F120076409F /* Appointment.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 				CD27AC4B1DF306070076409F /* ScheduleViewController.swift in Sources */,
 				CD27AC491DF306070076409F /* AppDelegate.swift in Sources */,
 				CD27AC691DF3221A0076409F /* OverviewViewController.swift in Sources */,
+				CD27AC711DF32F120076409F /* Appointment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
