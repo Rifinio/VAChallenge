@@ -13,16 +13,19 @@ class ViewController: UIViewController {
 
     let labelStartDate :UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15.0)
         return label
     }()
 
     let labelEndDate :UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15.0)
         return label
     }()
 
     let datePicker :UIDatePicker = {
         let datePicker :UIDatePicker = UIDatePicker()
+        datePicker.minimumDate = Date()
         return datePicker
     }()
 
@@ -31,10 +34,33 @@ class ViewController: UIViewController {
         self.setUpView()
 
         datePicker.addTarget(self, action: #selector(onDidChangeDate(sender:)), for: .valueChanged)
+        self.setDateLablesFromDate(beginDate: Date(), isDateNow: true)
+    }
+
+    func setDateLablesFromDate(beginDate :Date, isDateNow: Bool) {
+
+        let dateFormatter :DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM YYYY"
+
+        if isDateNow == true {
+            labelStartDate.text = "Today"
+        } else {
+            labelStartDate.text = dateFormatter.string(from: beginDate)
+        }
+
+        // caculate one week from now
+        let oneWeekLater :Date = Calendar.current.date(byAdding: .day, value: 7, to: beginDate)!
+        labelEndDate.text = dateFormatter.string(from: oneWeekLater)
+
     }
 
     func onDidChangeDate(sender: UIDatePicker) {
-        print("date changing")
+        self.setDateLablesFromDate(beginDate: sender.date as Date, isDateNow: false)
+    }
+
+    func clearButtonClick() {
+        self.setDateLablesFromDate(beginDate: Date(), isDateNow: true)
+        datePicker.setDate(Date(), animated: true)
     }
 
     private func setUpView(){
@@ -48,8 +74,10 @@ class ViewController: UIViewController {
 
         // add view ui elements
         let labelStartDateTitle :UILabel = UILabel()
+        labelStartDateTitle.font = UIFont.systemFont(ofSize: 15.0)
         labelStartDateTitle.text = "Begin:"
         let labelEndDateTitle :UILabel = UILabel()
+        labelEndDateTitle.font = UIFont.systemFont(ofSize: 15.0)
         labelEndDateTitle.text = "End Date:"
 
         self.view.addSubview(labelStartDateTitle)
@@ -121,16 +149,5 @@ class ViewController: UIViewController {
             make.top.equalTo(labelEndDateTitle.snp.bottom)
         }
     }
-
-    func clearButtonClick() {
-        print("clear")
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
