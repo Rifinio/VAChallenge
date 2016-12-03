@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD27AC491DF306070076409F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC481DF306070076409F /* AppDelegate.swift */; };
+		CD27AC4B1DF306070076409F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC4A1DF306070076409F /* ViewController.swift */; };
+		CD27AC4E1DF306070076409F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC4C1DF306070076409F /* Main.storyboard */; };
+		CD27AC501DF306070076409F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC4F1DF306070076409F /* Assets.xcassets */; };
+		CD27AC531DF306070076409F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27AC511DF306070076409F /* LaunchScreen.storyboard */; };
+		CD27AC5E1DF306070076409F /* VAChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC5D1DF306070076409F /* VAChallengeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD27AC5A1DF306070076409F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD27AC3D1DF306070076409F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD27AC441DF306070076409F;
+			remoteInfo = VAChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD27AC451DF306070076409F /* VAChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VAChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD27AC481DF306070076409F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD27AC4A1DF306070076409F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD27AC4D1DF306070076409F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD27AC4F1DF306070076409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD27AC521DF306070076409F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD27AC541DF306070076409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD27AC591DF306070076409F /* VAChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VAChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD27AC5D1DF306070076409F /* VAChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAChallengeTests.swift; sourceTree = "<group>"; };
+		CD27AC5F1DF306070076409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD27AC421DF306070076409F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD27AC561DF306070076409F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD27AC3C1DF306070076409F = {
+			isa = PBXGroup;
+			children = (
+				CD27AC471DF306070076409F /* VAChallenge */,
+				CD27AC5C1DF306070076409F /* VAChallengeTests */,
+				CD27AC461DF306070076409F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD27AC461DF306070076409F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD27AC451DF306070076409F /* VAChallenge.app */,
+				CD27AC591DF306070076409F /* VAChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD27AC471DF306070076409F /* VAChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				CD27AC481DF306070076409F /* AppDelegate.swift */,
+				CD27AC4A1DF306070076409F /* ViewController.swift */,
+				CD27AC4C1DF306070076409F /* Main.storyboard */,
+				CD27AC4F1DF306070076409F /* Assets.xcassets */,
+				CD27AC511DF306070076409F /* LaunchScreen.storyboard */,
+				CD27AC541DF306070076409F /* Info.plist */,
+			);
+			path = VAChallenge;
+			sourceTree = "<group>";
+		};
+		CD27AC5C1DF306070076409F /* VAChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD27AC5D1DF306070076409F /* VAChallengeTests.swift */,
+				CD27AC5F1DF306070076409F /* Info.plist */,
+			);
+			path = VAChallengeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD27AC441DF306070076409F /* VAChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD27AC621DF306070076409F /* Build configuration list for PBXNativeTarget "VAChallenge" */;
+			buildPhases = (
+				CD27AC411DF306070076409F /* Sources */,
+				CD27AC421DF306070076409F /* Frameworks */,
+				CD27AC431DF306070076409F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VAChallenge;
+			productName = VAChallenge;
+			productReference = CD27AC451DF306070076409F /* VAChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD27AC581DF306070076409F /* VAChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD27AC651DF306070076409F /* Build configuration list for PBXNativeTarget "VAChallengeTests" */;
+			buildPhases = (
+				CD27AC551DF306070076409F /* Sources */,
+				CD27AC561DF306070076409F /* Frameworks */,
+				CD27AC571DF306070076409F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD27AC5B1DF306070076409F /* PBXTargetDependency */,
+			);
+			name = VAChallengeTests;
+			productName = VAChallengeTests;
+			productReference = CD27AC591DF306070076409F /* VAChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD27AC3D1DF306070076409F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Adil Bougamza";
+				TargetAttributes = {
+					CD27AC441DF306070076409F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2XDF7R5YQ3;
+						ProvisioningStyle = Automatic;
+					};
+					CD27AC581DF306070076409F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 2XDF7R5YQ3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CD27AC441DF306070076409F;
+					};
+				};
+			};
+			buildConfigurationList = CD27AC401DF306070076409F /* Build configuration list for PBXProject "VAChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD27AC3C1DF306070076409F;
+			productRefGroup = CD27AC461DF306070076409F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD27AC441DF306070076409F /* VAChallenge */,
+				CD27AC581DF306070076409F /* VAChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD27AC431DF306070076409F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD27AC531DF306070076409F /* LaunchScreen.storyboard in Resources */,
+				CD27AC501DF306070076409F /* Assets.xcassets in Resources */,
+				CD27AC4E1DF306070076409F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD27AC571DF306070076409F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD27AC411DF306070076409F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD27AC4B1DF306070076409F /* ViewController.swift in Sources */,
+				CD27AC491DF306070076409F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD27AC551DF306070076409F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD27AC5E1DF306070076409F /* VAChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD27AC5B1DF306070076409F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD27AC441DF306070076409F /* VAChallenge */;
+			targetProxy = CD27AC5A1DF306070076409F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD27AC4C1DF306070076409F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD27AC4D1DF306070076409F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD27AC511DF306070076409F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD27AC521DF306070076409F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD27AC601DF306070076409F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD27AC611DF306070076409F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD27AC631DF306070076409F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
+				INFOPLIST_FILE = VAChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adil.bougmza.VAChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CD27AC641DF306070076409F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
+				INFOPLIST_FILE = VAChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adil.bougmza.VAChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CD27AC661DF306070076409F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
+				INFOPLIST_FILE = VAChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adil.bougmza.VAChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAChallenge.app/VAChallenge";
+			};
+			name = Debug;
+		};
+		CD27AC671DF306070076409F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2XDF7R5YQ3;
+				INFOPLIST_FILE = VAChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.adil.bougmza.VAChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VAChallenge.app/VAChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD27AC401DF306070076409F /* Build configuration list for PBXProject "VAChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD27AC601DF306070076409F /* Debug */,
+				CD27AC611DF306070076409F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD27AC621DF306070076409F /* Build configuration list for PBXNativeTarget "VAChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD27AC631DF306070076409F /* Debug */,
+				CD27AC641DF306070076409F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD27AC651DF306070076409F /* Build configuration list for PBXNativeTarget "VAChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD27AC661DF306070076409F /* Debug */,
+				CD27AC671DF306070076409F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD27AC3D1DF306070076409F /* Project object */;
+}
