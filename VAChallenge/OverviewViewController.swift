@@ -35,7 +35,7 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
             make.edges.equalTo(self.view)
         }
 
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        self.tableView.register(AppointmentCell.self, forCellReuseIdentifier: cellId)
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
@@ -61,11 +61,15 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId)!
-        cell.textLabel?.text = "celllllll"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! AppointmentCell
+        cell.setAppointment(appointment: appointments[indexPath.row])
 
         return cell
 
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70.0
     }
 
 }
