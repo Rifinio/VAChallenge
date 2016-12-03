@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
 
-        let mainViewController = ScheduleViewController()
+        let mainViewController = OverviewViewController()
         let rootViewController = UINavigationController(rootViewController: mainViewController)
 
         window?.rootViewController = rootViewController
