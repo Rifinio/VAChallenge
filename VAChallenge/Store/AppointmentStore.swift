@@ -46,6 +46,8 @@ class AppointmentStore: NSObject {
         }
     }
 
-    
-
+    // delete appointement 
+    func deleteAppointment(appointment : Appointment) {
+        appointments = appointments.filter({$0 !== appointment})
+    }
 }

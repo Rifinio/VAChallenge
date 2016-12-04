@@ -76,7 +76,9 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCellEditingStyle.delete {
-            print("deleting item at index : \(indexPath.row)")
+            AppointmentStore.sharedInstance.deleteAppointment(appointment: appointments[indexPath.row])
+            appointments = AppointmentStore.sharedInstance.fetchAppointments()
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
     }
 }
