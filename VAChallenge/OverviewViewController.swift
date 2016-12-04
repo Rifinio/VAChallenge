@@ -70,4 +70,13 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
         self.navigationController?.pushViewController(scheduleVC, animated: true)
     }
 
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            print("deleting item at index : \(indexPath.row)")
+        }
+    }
 }
