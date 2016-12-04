@@ -10,11 +10,13 @@ import UIKit
 
 class Appointment: NSObject {
 
-    let beginDate :Date
-    let endDate :Date
+    let identifier :String
+    var beginDate :Date
+    var endDate :Date
 
-    public init(_beginDate: Date, _endDate: Date) {
-        beginDate = _beginDate
-        endDate = _endDate
+    public init(beginDate: Date, endDate: Date) {
+        self.identifier = ProcessInfo.processInfo.globallyUniqueString
+        self.beginDate = beginDate
+        self.endDate = endDate
     }
 }
