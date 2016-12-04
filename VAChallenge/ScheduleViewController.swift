@@ -11,6 +11,7 @@ import SnapKit
 
 class ScheduleViewController: UIViewController {
 
+    var selectedAppointment :Appointment!
     let labelStartDate :UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15.0)
@@ -29,12 +30,31 @@ class ScheduleViewController: UIViewController {
         return datePicker
     }()
 
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    init(appointment :Appointment) {
+        super.init(nibName: nil, bundle: nil)
+        self.selectedAppointment = appointment
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
 
         datePicker.addTarget(self, action: #selector(onDidChangeDate(sender:)), for: .valueChanged)
-        self.setDateLablesFromDate(beginDate: Date())
+
+        if (self.selectedAppointment != nil) {
+            self.setDateLablesFromDate(beginDate: self.selectedAppointment.beginDate)
+            datePicker.date = self.selectedAppointment.beginDate
+        } else {
+            self.setDateLablesFromDate(beginDate: Date())
+        }
     }
 
     func setDateLablesFromDate(beginDate :Date) {
@@ -70,7 +90,6 @@ class ScheduleViewController: UIViewController {
 
     private func setUpView(){
         self.view.backgroundColor = UIColor.white
-
         self.navigationItem.title = "Schedule"
 
         // add navigation item : clear

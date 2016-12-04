@@ -40,8 +40,11 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.dataSource = self
 
 
+        let tempDateFormatter = DateFormatter()
+        tempDateFormatter.dateFormat = "dd/MM/YYYY"
+
         let app1 = Appointment(_beginDate: Date(), _endDate: Date())
-        let app2 = Appointment(_beginDate: Date(), _endDate: Date())
+        let app2 = Appointment(_beginDate: tempDateFormatter.date(from: "10/12/2017")!, _endDate: Date())
         appointments += [app1, app2]
 
     }
@@ -70,6 +73,11 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let scheduleVC :ScheduleViewController = ScheduleViewController(appointment: appointments[indexPath.row])
+        self.navigationController?.pushViewController(scheduleVC, animated: true)
     }
 
 }
