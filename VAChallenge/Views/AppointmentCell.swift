@@ -45,7 +45,6 @@ class AppointmentCell: UITableViewCell {
         }
 
         self.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,13 +63,14 @@ class AppointmentCell: UITableViewCell {
     }
 
     public func setAppointment(appointment : Appointment) {
+
         self.appointment = appointment
+
         let dateFormatter :DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM YYYY"
 
         begindateLabel.text = "Begin: " + dateFormatter.string(from: appointment.beginDate)
         endDateLabel.text = "End: " + dateFormatter.string(from: appointment.endDate)
-
     }
 
 }

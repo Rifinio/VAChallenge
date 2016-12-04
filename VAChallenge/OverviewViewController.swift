@@ -23,8 +23,6 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
-        // Do any additional setup after loading the view.
-
         self.navigationItem.title = "Overview"
 
         let addButtonItem :UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonAction))
@@ -38,27 +36,19 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.register(AppointmentCell.self, forCellReuseIdentifier: cellId)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+    }
 
-
-        let tempDateFormatter = DateFormatter()
-        tempDateFormatter.dateFormat = "dd/MM/YYYY"
-
-        let app1 = Appointment(_beginDate: Date(), _endDate: Date())
-        let app2 = Appointment(_beginDate: tempDateFormatter.date(from: "10/12/2017")!, _endDate: Date())
-        appointments += [app1, app2]
-
+    override func viewWillAppear(_ animated: Bool) {
+        appointments = AppointmentStore.sharedInstance.fetchAppointments()
+        self.tableView.reloadData()
     }
 
     func addButtonAction() {
         let scheduleVC :ScheduleViewController = ScheduleViewController()
         self.navigationController?.pushViewController(scheduleVC, animated: true)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    // MARK: tableview delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appointments.count
     }

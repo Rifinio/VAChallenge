@@ -30,12 +30,12 @@ class AppointmentStore: NSObject {
         return appointments
     }
 
-    // add new appointment appointment
+    // add new appointment
     func addAppointment(appointment :Appointment) {
         appointments += [appointment]
     }
 
-    // update existing appointment
+    // update existing appointment if found
     func updaeteAppointment(appointment: Appointment, beginDate: Date, endDate: Date) {
         for apt in appointments {
             if apt.identifier == appointment.identifier {

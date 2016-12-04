@@ -12,24 +12,24 @@ import SnapKit
 class ScheduleViewController: UIViewController {
 
     var selectedAppointment :Appointment!
+
     let labelStartDate :UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15.0)
         return label
     }()
-
     let labelEndDate :UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15.0)
         return label
     }()
-
     let datePicker :UIDatePicker = {
         let datePicker :UIDatePicker = UIDatePicker()
         datePicker.minimumDate = Date()
         return datePicker
     }()
 
+    // MARK: initializers
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,6 +43,7 @@ class ScheduleViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: View controller cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setUpView()
@@ -52,11 +53,26 @@ class ScheduleViewController: UIViewController {
         if (self.selectedAppointment != nil) {
             self.setDateLablesFromDate(beginDate: self.selectedAppointment.beginDate)
             datePicker.date = self.selectedAppointment.beginDate
+            print("appointment identifier : \(self.selectedAppointment.identifier)")
         } else {
             self.setDateLablesFromDate(beginDate: Date())
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+
+        let selectedBeginDate :Date = datePicker.date
+        let endDate = dateByAddingOneWeek(date: selectedBeginDate)
+
+        if (self.selectedAppointment != nil) {
+            AppointmentStore.sharedInstance.updaeteAppointment(appointment: self.selectedAppointment, beginDate: selectedBeginDate, endDate: endDate)
+        } else {
+            let currentSelecedAppointment = Appointment(beginDate: selectedBeginDate, endDate: endDate)
+            AppointmentStore.sharedInstance.addAppointment(appointment: currentSelecedAppointment)
+        }
+    }
+
+    // MARK: view helper methods
     func setDateLablesFromDate(beginDate :Date) {
 
         let dateFormatter :DateFormatter = DateFormatter()
@@ -69,10 +85,20 @@ class ScheduleViewController: UIViewController {
         }
 
         // caculate one week from now
-        let oneWeekLater :Date = Calendar.current.date(byAdding: .day, value: 7, to: beginDate)!
-        labelEndDate.text = dateFormatter.string(from: oneWeekLater)
+        labelEndDate.text = dateFormatter.string(from: dateByAddingOneWeek(date: beginDate))
     }
 
+    func dateByAddingOneWeek(date: Date) -> Date {
+        return Calendar.current.date(byAdding: .day, value: 7, to: date)!
+    }
+
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
+        return components.day!
+    }
+
+    // MARK: view actions
     func onDidChangeDate(sender: UIDatePicker) {
         self.setDateLablesFromDate(beginDate: sender.date as Date)
     }
@@ -82,12 +108,7 @@ class ScheduleViewController: UIViewController {
         datePicker.setDate(Date(), animated: true)
     }
 
-    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
-        return components.day!
-    }
-
+    // create view UI elements and add constraints
     private func setUpView(){
         self.view.backgroundColor = UIColor.white
         self.navigationItem.title = "Schedule"
