@@ -17,6 +17,7 @@
 		CD27AC711DF32F120076409F /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC701DF32F120076409F /* Appointment.swift */; };
 		CD27AC761DF331BC0076409F /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC751DF331BC0076409F /* AppointmentCell.swift */; };
 		CD27AC791DF45C940076409F /* AppointmentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27AC781DF45C940076409F /* AppointmentStore.swift */; };
+		CD27ACB61DF5DBEE0076409F /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27ACB51DF5DBEE0076409F /* ScheduleViewModel.swift */; };
 		E5067811DC1AF19A4B96687A /* Pods_VAChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7AF273614F8660D29BC924B /* Pods_VAChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,7 @@
 		A7B775C92BC0C8B1BF1172B1 /* Pods-VAChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VAChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-VAChallenge/Pods-VAChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		CD27AC451DF306070076409F /* VAChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VAChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD27AC481DF306070076409F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD27AC4A1DF306070076409F /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		CD27AC4A1DF306070076409F /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = ../ScheduleViewController.swift; sourceTree = "<group>"; };
 		CD27AC4F1DF306070076409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD27AC521DF306070076409F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD27AC541DF306070076409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		CD27AC701DF32F120076409F /* Appointment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		CD27AC751DF331BC0076409F /* AppointmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
 		CD27AC781DF45C940076409F /* AppointmentStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentStore.swift; sourceTree = "<group>"; };
+		CD27ACB51DF5DBEE0076409F /* ScheduleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		D7AF273614F8660D29BC924B /* Pods_VAChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VAChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,11 +117,11 @@
 		CD27AC471DF306070076409F /* VAChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				CD27AC481DF306070076409F /* AppDelegate.swift */,
+				CD27ACB41DF5DB950076409F /* ViewModel */,
 				CD27AC771DF45C670076409F /* Store */,
 				CD27AC721DF331630076409F /* Views */,
 				CD27AC6F1DF32EFE0076409F /* Model */,
-				CD27AC481DF306070076409F /* AppDelegate.swift */,
-				CD27AC4A1DF306070076409F /* ScheduleViewController.swift */,
 				CD27AC681DF3221A0076409F /* OverviewViewController.swift */,
 				CD27AC4F1DF306070076409F /* Assets.xcassets */,
 				CD27AC511DF306070076409F /* LaunchScreen.storyboard */,
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				CD27AC751DF331BC0076409F /* AppointmentCell.swift */,
+				CD27AC4A1DF306070076409F /* ScheduleViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +162,14 @@
 				CD27AC781DF45C940076409F /* AppointmentStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		CD27ACB41DF5DB950076409F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD27ACB51DF5DBEE0076409F /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +378,7 @@
 				CD27AC4B1DF306070076409F /* ScheduleViewController.swift in Sources */,
 				CD27AC761DF331BC0076409F /* AppointmentCell.swift in Sources */,
 				CD27AC491DF306070076409F /* AppDelegate.swift in Sources */,
+				CD27ACB61DF5DBEE0076409F /* ScheduleViewModel.swift in Sources */,
 				CD27AC791DF45C940076409F /* AppointmentStore.swift in Sources */,
 				CD27AC691DF3221A0076409F /* OverviewViewController.swift in Sources */,
 				CD27AC711DF32F120076409F /* Appointment.swift in Sources */,

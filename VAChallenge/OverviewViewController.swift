@@ -36,6 +36,14 @@ class OverviewViewController: UIViewController, UITableViewDelegate, UITableView
         self.tableView.register(AppointmentCell.self, forCellReuseIdentifier: cellId)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+
+        // add fake data
+        let tempDateFormatter = DateFormatter()
+        tempDateFormatter.dateFormat = "dd/MM/YYYY"
+        let app1 = Appointment(beginDate: Date(), endDate: Date())
+        let app2 = Appointment(beginDate: tempDateFormatter.date(from: "10/12/2017")!, endDate: Date())
+        AppointmentStore.sharedInstance.addAppointment(appointment: app1)
+        AppointmentStore.sharedInstance.addAppointment(appointment: app2)
     }
 
     override func viewWillAppear(_ animated: Bool) {

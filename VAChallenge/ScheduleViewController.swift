@@ -11,6 +11,8 @@ import SnapKit
 
 class ScheduleViewController: UIViewController {
 
+    var scheduleVM : ScheduleViewModel?
+    
     var selectedAppointment :Appointment!
 
     let labelStartDate :UILabel = {
@@ -32,11 +34,13 @@ class ScheduleViewController: UIViewController {
     // MARK: initializers
     init() {
         super.init(nibName: nil, bundle: nil)
+        scheduleVM = ScheduleViewModel(store: AppointmentStore.sharedInstance)
     }
 
     init(appointment :Appointment) {
         super.init(nibName: nil, bundle: nil)
-        self.selectedAppointment = appointment
+        scheduleVM = ScheduleViewModel(store: AppointmentStore.sharedInstance)
+        scheduleVM?.selectedAppointment = appointment
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,17 +50,13 @@ class ScheduleViewController: UIViewController {
     // MARK: View controller cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.setUpView()
 
         datePicker.addTarget(self, action: #selector(onDidChangeDate(sender:)), for: .valueChanged)
 
-        if (self.selectedAppointment != nil) {
-            self.setDateLablesFromDate(beginDate: self.selectedAppointment.beginDate)
-            datePicker.date = self.selectedAppointment.beginDate
-            print("appointment identifier : \(self.selectedAppointment.identifier)")
-        } else {
-            self.setDateLablesFromDate(beginDate: Date())
-        }
+        self.setDateLablesFromDate(beginDate: (scheduleVM?.startDate())!)
+        datePicker.date = (scheduleVM?.startDate())!
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,28 +74,16 @@ class ScheduleViewController: UIViewController {
 
     // MARK: view helper methods
     func setDateLablesFromDate(beginDate :Date) {
+        // update view model with
+        self.scheduleVM?.setDatesFromStartDate(beginDate: beginDate)
 
-        let dateFormatter :DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM YYYY"
-
-        if self.daysBetweenDates(startDate: Date(), endDate: beginDate) == 0 {
-            labelStartDate.text = "Today"
-        } else {
-            labelStartDate.text = dateFormatter.string(from: beginDate)
-        }
-
-        // caculate one week from now
-        labelEndDate.text = dateFormatter.string(from: dateByAddingOneWeek(date: beginDate))
+        // set date labels with formatted data from view model
+        labelStartDate.text = self.scheduleVM?.beginDateStr
+        labelEndDate.text = self.scheduleVM?.endDateStr
     }
 
     func dateByAddingOneWeek(date: Date) -> Date {
         return Calendar.current.date(byAdding: .day, value: 7, to: date)!
-    }
-
-    func daysBetweenDates(startDate: Date, endDate: Date) -> Int {
-        let calendar = Calendar.current
-        let components = calendar.dateComponents([Calendar.Component.day], from: startDate, to: endDate)
-        return components.day!
     }
 
     // MARK: view actions
@@ -187,7 +175,6 @@ class ScheduleViewController: UIViewController {
             make.top.equalTo(datePicker.snp.bottom).offset(10)
             make.height.equalTo(50)
         }
-        labelEndDate.text = "End Today"
         lineView3.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)
             make.height.equalTo(0.5)

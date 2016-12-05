@@ -10,9 +10,12 @@ import XCTest
 @testable import VAChallenge
 
 class VAChallengeTests: XCTestCase {
-    
+
+    var store :AppointmentStore = AppointmentStore.sharedInstance
+
     override func setUp() {
         super.setUp()
+
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -20,17 +23,17 @@ class VAChallengeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testStoreFetchData() {
+//        let appArr = store?.fetchAppointments()
+        XCTAssertEqual(store.fetchAppointments().count, 3)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testStoreAddAppointment() {
+        let appointment = Appointment(beginDate: Date(), endDate: Date())
+        store.addAppointment(appointment: appointment)
+        XCTAssertEqual(store.fetchAppointments().count, 3)
     }
-    
+
+
 }
